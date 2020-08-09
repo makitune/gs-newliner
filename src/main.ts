@@ -5,12 +5,15 @@ function addToSheets(str: string) {
 
 function doPost(e: any) {
   var contents = JSON.parse(e.postData.contents);
-  addToSheets(contents.event.text);
 
   // for verification
-  return ContentService.createTextOutput(JSON.stringify(e)).setMimeType(
-    ContentService.MimeType.JSON
-  );
+  if (contents.event == null) {
+    return ContentService.createTextOutput(JSON.stringify(e)).setMimeType(
+      ContentService.MimeType.JSON
+    );
+  }
+
+  addToSheets(contents.event.text);
 }
 
 function doGet(e: any) {
