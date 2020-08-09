@@ -4,6 +4,10 @@ function addToSheets(str: string) {
 }
 
 function doPost(e: any) {
+  // for verification
+  return ContentService.createTextOutput(JSON.stringify(e)).setMimeType(
+    ContentService.MimeType.JSON
+  );
 }
 
 function doGet(e: any) {
