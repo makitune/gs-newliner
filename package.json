@@ -3,5 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "makitune",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@types/google-apps-script": "^1.0.14",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "prettier": "^2.0.5"
+  }
 }
